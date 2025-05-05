@@ -12,7 +12,9 @@ app.use(express.json());
 
 // Connect to DB
 connectDB();
-
+app.get("/",()=>{
+    res.send("Hello Node")
+})
 // Routes
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/customers', require('./routes/customers'));
