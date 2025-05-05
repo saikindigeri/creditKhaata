@@ -1,8 +1,10 @@
 const express = require('express');
 const router = express.Router();
+
+
 const auth = require('../middleware/auth');
-const Customer = require('../models/Customer');
 const Loan = require('../models/Loan');
+const Customer = require('../models/Customer');
 
 
 router.get('/', auth, async (req, res) => {

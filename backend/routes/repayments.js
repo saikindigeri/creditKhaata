@@ -1,8 +1,8 @@
 const express = require('express');
-const router = express.Router();
 const auth = require('../middleware/auth');
 const Loan = require('../models/Loan');
 const Repayment = require('../models/Repayment');
+const router = express.Router();
 
 // Get all repayments for a loan
 router.get('/loan/:loanId', auth, async (req, res) => {

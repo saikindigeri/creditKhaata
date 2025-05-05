@@ -12,7 +12,7 @@ app.use(express.json());
 
 // Connect to DB
 connectDB();
-app.get("/",()=>{
+app.get("/",(req,res)=>{
     res.send("Hello Node")
 })
 // Routes
