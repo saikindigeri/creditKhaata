@@ -10,8 +10,9 @@ const Login = () => {
     e.preventDefault();
     try {
       const res = await axios.post(`${import.meta.env.VITE_API_URL}/auth/login`, formData);
-      localStorage.setItem('token', res.data?.token);
-     
+      console.log(res.data.token)
+      localStorage.setItem('token', res.data.token);
+  
       navigate('/');
     // eslint-disable-next-line no-unused-vars
     } catch (err) {

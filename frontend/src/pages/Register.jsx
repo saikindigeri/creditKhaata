@@ -9,9 +9,9 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(`${import.meta.env.VITE_API_URL}/auth/register`, formData);
-      localStorage.setItem('token', res.data?.token);
-      navigate('/');
+      await axios.post(`${import.meta.env.VITE_API_URL}/auth/register`, formData);
+      
+      navigate('/login');
     // eslint-disable-next-line no-unused-vars
     } catch (err) {
       alert('Registration failed');

@@ -7,7 +7,7 @@ const Navbar = () => {
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
-  console.log('Navbar component rendered'); // Debug: Verify component renders
+
 
   useEffect(() => {
     console.log('useEffect triggered in Navbar'); // Debug: Verify useEffect runs
@@ -34,7 +34,7 @@ const Navbar = () => {
     } else {
       console.log('No token found, skipping user fetch'); // Debug: Log when no token
     }
-  }, []);
+  }, );
 
   const handleLogout = () => {
     console.log('Logout triggered'); // Debug: Verify logout
